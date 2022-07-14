@@ -6,7 +6,6 @@ Keeper is a note-taking app developed using React
 
 In the project directory, you can run:
 #### `npm install` 
-\
 #### `npm start` 
-\
+
 
