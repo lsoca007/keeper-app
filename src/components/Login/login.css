@@ -27,13 +27,19 @@ form {
     border-radius: 3px;
     width: 250px;
     font-size: 18px;
-    
+    cursor: pointer;
     
     margin: 0 auto 10px auto;
     display: block;
 
  
     
+  }
+
+  form button:hover {
+    color: white;
+    background-color: #006778;
+
   }
   .container {
     margin: 10% auto;
@@ -54,7 +60,8 @@ form {
   body {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
-    background: #508aa3;
+    /*background: #508aa3;*/
+    background: rgba(149, 214, 247);
     width: 100%;
     height: 100%;
   }
