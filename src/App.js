@@ -21,18 +21,29 @@ function App() {
     setNotes(prevNotes => {
       return [...prevNotes, newNote]; // get the previous notes and add the new note at the end
     });
-
   }
+  function deleteNote(id){
+    setNotes(prevNotes => {
+      return prevNotes.filter((noteItem, index) => {
+        return index !==id;
+      })
+    })
+
+  }  
+
+  
 
   return (
     <div className="App"> 
       <Header/>
       <CreateArea onAdd={addNote}/>
       {isLoggedIn === true ?
-      notes.map(  noteItem => 
-                  <Note key = {noteItem.key}
+      notes.map(  (noteItem, index) => 
+                  <Note key = {index}
+                        id={index}
                         title={noteItem.title}
                         content={noteItem.content}
+                        onDelete= {deleteNote}
                   />
                 ) : <Login isRegistered = {userIsRegisterd}/>}     
       <Footer/>
