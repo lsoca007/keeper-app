@@ -6,16 +6,18 @@ import Footer from './components/Footer';
 import Note from './components/Note/Note';
 import notes from './components/Note/notes';
 import Login from './components/Login/login';
+import CreateArea from './components/CreateArea/CreateArea';
 
 
-var isLoggedIn = false;
-var userIsRegisterd = true;
+var isLoggedIn = true;
+var userIsRegisterd = false;
 
 function App() {
   return (
     <div className="App"> 
       <Header/>
-      {isLoggedIn === true ? 
+      <CreateArea/>
+      {isLoggedIn === true ?
       notes.map(  noteItem => 
                   <Note key = {noteItem.key}
                         title={noteItem.title}

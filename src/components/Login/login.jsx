@@ -5,7 +5,7 @@ import "./login.css";
 function Login(props) {
 
     return (
-        <form className = "form">
+        <form className = "log-form">
             <Input 
                 type="text" 
                 placeholder="Username"
